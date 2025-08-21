@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Navbar from "./generalComponents/Navbar";
-import Banner from "./generalComponents/Banner";
+import Banner from "./homeComponents/Banner";
+import HomeProducts from "./homeComponents/HomeProducts";
 
 export default function Home() {
   return (
     <div>
     <Banner />
+    <HomeProducts />
     </div>
   );
 }

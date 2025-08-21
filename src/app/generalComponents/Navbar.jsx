@@ -17,7 +17,7 @@ const Navbar = () => {
   }
 
     return (
-    <div className='bg-base-100 shadow-sm'>
+    <div className='h-[80px] bg-base-100 shadow-sm'>
 <div className="navbar p-4 sm:px-6 lg:px-8 max-w-7xl w-full mx-auto">
   <div className="navbar-start ">
     <div className="dropdown">
@@ -31,7 +31,8 @@ const Navbar = () => {
       </ul>
     </div>
     <Link href={'/'} className="text-2xl">
-      <Image src={'/assets/logo.svg'} width={75} height={75} alt='car doctor' className='W-18 h-auto'></Image>
+      {/* <Image src={'/assets/logo.svg'} width={75} height={75} alt='car doctor' className='W-18 h-auto'></Image> */}
+      <h2 className='text-2xl font-bold'>SHop Me</h2>
     </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
@@ -56,3 +57,18 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+/* 
+https://i.ibb.co.com/Tx01skZk/shopping.jpg
+https://i.ibb.co.com/zhPXvy4r/img-1.jpg
+https://i.ibb.co.com/tws3s7Fr/img-2.jpg
+https://i.ibb.co.com/fzt9hbpC/img-3.jpg
+https://i.ibb.co.com/HTWsNfmr/img-4.jpg
+https://i.ibb.co.com/8LZ57J55/img-5.png
+https://i.ibb.co.com/j9qtc2sr/img-6.png
+https://i.ibb.co.com/qLbH6RfL/img-7.png
+https://i.ibb.co.com/ynbFgGvx/img-8.png
+https://i.ibb.co.com/d46pDr2Z/img-9.png
+https://i.ibb.co.com/Vc8HxRJy/img-10.png
+https://i.ibb.co.com/wrb7VNMz/img-11.png
+https://i.ibb.co.com/C58Xs94Z/img-12.png */

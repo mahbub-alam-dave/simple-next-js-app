@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "Classic White T-Shirt",
+    "image": "https://i.ibb.co.com/zhPXvy4r/img-1.jpg",
+    "price": 15.99,
+    "description": "100% cotton slim fit white t-shirt, perfect for casual wear.",
+    "category": "T-Shirt",
+    "qty": 120,
+    "rating": 4.5
+  },
+  {
+    "id": 2,
+    "name": "Formal Blue Shirt",
+    "image": "https://i.ibb.co.com/tws3s7Fr/img-2.jpg",
+    "price": 35.50,
+    "description": "Men’s long-sleeve formal shirt with button-down collar, wrinkle-free fabric.",
+    "category": "Shirt",
+    "qty": 80,
+    "rating": 4.6
+  },
+  {
+    "id": 3,
+    "name": "Slim Fit Black Jeans",
+    "image": "https://i.ibb.co.com/fzt9hbpC/img-3.jpg",
+    "price": 49.99,
+    "description": "Slim fit stretchable black jeans with 5 pockets, modern style.",
+    "category": "Jeans",
+    "qty": 95,
+    "rating": 4.7
+  },
+  {
+    "id": 4,
+    "name": "Striped Polo Shirt",
+    "image": "https://i.ibb.co.com/HTWsNfmr/img-4.jpg",
+    "price": 25.00,
+    "description": "Casual striped polo shirt with breathable cotton fabric.",
+    "category": "Polo",
+    "qty": 110,
+    "rating": 4.4
+  },
+  {
+    "id": 5,
+    "name": "Navy Blue Blazer",
+    "image": "https://i.ibb.co.com/8LZ57J55/img-5.png",
+    "price": 89.90,
+    "description": "Single-breasted slim fit blazer for formal and semi-formal occasions.",
+    "category": "Blazer",
+    "qty": 45,
+    "rating": 4.8
+  },
+  {
+    "id": 6,
+    "name": "Casual Hoodie",
+    "image": "https://i.ibb.co.com/j9qtc2sr/img-6.png",
+    "price": 39.95,
+    "description": "Soft cotton hoodie with front pocket and adjustable drawstring.",
+    "category": "Hoodie",
+    "qty": 150,
+    "rating": 4.6
+  },
+  {
+    "id": 7,
+    "name": "Leather Belt",
+    "image": "https://i.ibb.co.com/qLbH6RfL/img-7.png",
+    "price": 22.50,
+    "description": "Genuine leather belt with classic buckle, ideal for jeans and trousers.",
+    "category": "Accessory",
+    "qty": 200,
+    "rating": 4.7
+  },
+  {
+    "id": 8,
+    "name": "Formal Silk Tie",
+    "image": "https://i.ibb.co.com/ynbFgGvx/img-8.png",
+    "price": 18.75,
+    "description": "Premium silk tie with smooth texture, perfect for formal wear.",
+    "category": "Tie",
+    "qty": 160,
+    "rating": 4.5
+  },
+  {
+    "id": 9,
+    "name": "Denim Jacket",
+    "image": "https://i.ibb.co.com/d46pDr2Z/img-9.png",
+    "price": 65.00,
+    "description": "Classic blue denim jacket with button closure and chest pockets.",
+    "category": "Jacket",
+    "qty": 70,
+    "rating": 4.6
+  },
+  {
+    "id": 10,
+    "name": "Chinos Pants",
+    "image": "https://i.ibb.co.com/Vc8HxRJy/img-10.png",
+    "price": 42.00,
+    "description": "Slim fit chinos made with stretchable cotton fabric, versatile for office or casual wear.",
+    "category": "Pants",
+    "qty": 90,
+    "rating": 4.5
+  }
+]

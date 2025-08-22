@@ -74,7 +74,7 @@ const LoginForm = () => {
       </div>
       <button
         type="submit"
-        className="bg-red-600 px-6 py-3 rounded-full mt-4 w-full text-white font-medium text-lg"
+        className="bg-red-600 px-6 py-3 cursor-pointer rounded-full mt-4 w-full text-white font-medium text-lg"
       >
         Sign Up
       </button>

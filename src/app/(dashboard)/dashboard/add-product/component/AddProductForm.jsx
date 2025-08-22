@@ -71,7 +71,7 @@ export default function ProductForm() {
                   showConfirmButton: false,
                   timer: 1500,
                 });
-                router.push("/");
+                router.push("/products");
       reset();
       setPreview(null);
     }

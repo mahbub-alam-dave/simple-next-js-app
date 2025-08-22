@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
-import google from "../../../../public/assets/Google.png"
+import google from "../../../../.././public/assets/Google.png"
 
 
 const SocialLogin = () => {

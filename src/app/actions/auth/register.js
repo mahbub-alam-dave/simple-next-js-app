@@ -18,11 +18,14 @@ export const registerUser = async (registerData) => {
         registerData.password = hashedPassword
         const result = await dbConnect(collectionNames.users).insertOne(registerData)
         console.log(result)
-        const clientSafeResult = {
+        const clientSideResult = {
   acknowledged: result.acknowledged,
   insertedId: result.insertedId.toString(), // <-- FIXED
 };
-        return clientSafeResult
+        return {
+    acknowledged: result.acknowledged,
+      insertedId: result.insertedId.toString(),
+        }
     }
 
     else {

@@ -15,7 +15,7 @@ const SocialLogin = () => {
 
     const handleSocialLogin = (providerName) => {
         console.log("social login", providerName);
-        signIn(providerName, {callbackUrl: "/",})
+        signIn(providerName, {callbackUrl: "/products",})
         
       }
 

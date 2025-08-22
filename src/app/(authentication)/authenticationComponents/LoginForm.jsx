@@ -20,7 +20,7 @@ const LoginForm = () => {
       const response = await signIn("credentials", {
         email,
         password,
-        callbackUrl: "/",
+        callbackUrl: "/products",
         redirect: false,
       });
       if (response.ok) {
@@ -28,7 +28,7 @@ const LoginForm = () => {
         Swal.fire({
           position: "center",
           icon: "success",
-          title: "Your work has been saved",
+          title: "Logged In successfully",
           showConfirmButton: false,
           timer: 1500,
         });

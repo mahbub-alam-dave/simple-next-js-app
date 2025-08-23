@@ -27,7 +27,7 @@ This project demonstrates a small e-commerce style app built with **Next.js**.
 
 ## 🔗 Links
 - **GitHub Repository:** [mahbub-alam-dave/simple-next-js-app](https://github.com/mahbub-alam-dave/simple-next-js-app)
-- **Live Link:** (Coming soon 🚀)
+- **Live Link:** (https://scic-next-js-project-assignment.vercel.app/)
 
 ## ⚙️ Setup & Installation
 

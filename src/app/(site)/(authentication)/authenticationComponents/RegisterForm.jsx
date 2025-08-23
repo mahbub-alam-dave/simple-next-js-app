@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { registerUser } from '@/app/actions/auth/register';
 import SocialLogin from './SocialLogin';
 import { signIn } from 'next-auth/react';
+import Loader from '@/app/generalComponents/Loader';
 
 const RegisterForm = () => {
 
@@ -22,7 +23,7 @@ const RegisterForm = () => {
 const signInResult = await signIn("credentials", {
     email: registerData.email,
     password: registerData.password,
-    callbackUrl: "/dashboard",
+    callbackUrl: "/products",
     redirect: true,
 })
 
@@ -59,7 +60,7 @@ const signInResult = await signIn("credentials", {
                     <label htmlFor="password" className=''>Password</label>
                     <input type="password" name='password' className='input w-full mt-2' placeholder='Enter password (6 characters)' />
                 </div>
-                <button type="submit" className='bg-red-600 px-6 py-3 rounded-full mt-4 w-full text-white font-medium text-lg cursor-pointer'>{loading ? "Loading..." : "Register"}</button>
+                <button type="submit" className='bg-red-600 px-6 py-3 rounded-full mt-4 w-full text-white font-medium text-lg cursor-pointer'>{loading ? <Loader size={20} color="text-white" /> : "Register"}</button>
                 <span className='mt-6 text-center'>Or Sign Up with</span>
                 <SocialLogin />
                 <span className='text-center'>Already have an account? <Link href={'/login'} className='text-red-600'>Login</Link></span>

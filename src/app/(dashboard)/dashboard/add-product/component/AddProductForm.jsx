@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Swal from "sweetalert2";
+import Loader from "@/app/generalComponents/Loader";
 
 
 export default function ProductForm() {
@@ -103,7 +104,7 @@ export default function ProductForm() {
           <input
             type="text"
             {...register("name", { required: "Name is required" })}
-            className="w-full px-4 py-2 border rounded-xl text-gray-700" 
+            className="w-full px-4 py-2 border border-gray-300 rounded-xl text-gray-700" 
             placeholder="Product name"
           />
           {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
@@ -116,7 +117,7 @@ export default function ProductForm() {
             accept="image/*"
             {...register("image", { required: "Image is required" })}
             onChange={handleImageChange}
-            className="w-full px-3 py-2 border rounded-xl bg-gray-50 text-gray-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-xl bg-gray-50 text-gray-500"
             placeholder="click to upload product image "
           />
           {preview && <img src={preview} alt="Preview" className="mt-2 w-full h-48 object-cover rounded-xl" />}
@@ -132,7 +133,7 @@ export default function ProductForm() {
               required: "Price is required",
               min: { value: 0.1, message: "Price must be greater than 0" },
             })}
-            className="w-full px-4 py-2 border rounded-xl text-gray-700"
+            className="w-full px-4 py-2 border border-gray-300 rounded-xl text-gray-700"
             placeholder="Product price"
           />
           {errors.price && <p className="text-red-500 text-sm">{errors.price.message}</p>}
@@ -142,7 +143,7 @@ export default function ProductForm() {
           <label className="block mb-1 font-semibold">Category</label>
           <select
             {...register("category", { required: "Category is required" })}
-            className="w-full px-4 py-2 border rounded-xl text-gray-500"
+            className="w-full px-4 py-2 border border-gray-300 rounded-xl text-gray-500"
           >
             <option value="">Select a category</option>
             <option value="Shirt">Shirt</option>
@@ -163,7 +164,7 @@ export default function ProductForm() {
               required: "Quantity is required",
               min: { value: 1, message: "Quantity must be at least 1" },
             })}
-            className="w-full px-4 py-2 border rounded-xl"
+            className="w-full px-4 py-2 border border-gray-300 rounded-xl"
             placeholder="Product quantity"
           />
           {errors.qty && <p className="text-red-500 text-sm">{errors.qty.message}</p>}
@@ -176,7 +177,7 @@ export default function ProductForm() {
               required: "Description is required",
               minLength: { value: 10, message: "At least 10 characters required" },
             })}
-            className="w-full px-4 py-2 border rounded-xl"
+            className="w-full px-4 py-2 border border-gray-300 rounded-xl"
             rows="4"
             placeholder="Product description"
           ></textarea>
@@ -188,7 +189,7 @@ export default function ProductForm() {
           disabled={loading}
           className="w-full bg-red-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-xl"
         >
-          {loading ? "Uploading..." : "Add Product"}
+          {loading ? <Loader size={20} color="text-white" /> : "Add Product"}
         </button>
       </form>
     </div>

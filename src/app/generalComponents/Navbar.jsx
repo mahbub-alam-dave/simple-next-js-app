@@ -7,7 +7,7 @@ import React from 'react';
 const Navbar = () => {
 
   const { data: session, status } = useSession();
-  if (status === "loading") return <p>Loading...</p>;
+  // if (status === "loading") return <p>Loading...</p>;
 
       const navLinks = () => {
     return (

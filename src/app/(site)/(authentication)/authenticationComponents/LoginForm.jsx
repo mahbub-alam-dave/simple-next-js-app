@@ -1,14 +1,16 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
 import { useRouter, getSession } from "next/navigation";
 import toast from "react-hot-toast";
 import SocialLogin from "./SocialLogin";
 import Swal from 'sweetalert2'
+import Loader from "@/app/generalComponents/Loader";
 
 const LoginForm = () => {
   const router = useRouter();
+  const [loading, setLoading] = useState(false)
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -16,12 +18,13 @@ const LoginForm = () => {
     const email = form.email.value;
     const password = form.password.value;
     toast("Logging...");
+    setLoading(true)
     try {
       const response = await signIn("credentials", {
         email,
         password,
         callbackUrl: "/products",
-        redirect: false,
+        redirect: true,
       });
       if (response.ok) {
         // toast.success("Logged In successfully");
@@ -46,6 +49,9 @@ const LoginForm = () => {
     } catch (error) {
       console.log(error);
       toast.error("FAILED to Log In");
+    }
+    finally {
+      setLoading(false)
     }
   };
   return (
@@ -76,7 +82,7 @@ const LoginForm = () => {
         type="submit"
         className="bg-red-600 px-6 py-3 cursor-pointer rounded-full mt-4 w-full text-white font-medium text-lg"
       >
-        Sign Up
+        {loading ? <Loader size={20} color="text-white" /> : "Login"}
       </button>
       <span className="mt-6 text-center">Or Sign Up with</span>
       {/* <div className='flex justify-center items-center gap-4 mb-6'>

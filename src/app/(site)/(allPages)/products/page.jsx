@@ -3,6 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
+// disable static caching
+export const dynamic = "force-dynamic";
+
 const page = async () => {
         const products = await dbConnect(collectionNames.products).find().toArray()
     

@@ -4,9 +4,11 @@ import { FiPlus, FiMinus } from "react-icons/fi";
 
 const page = async({params}) => {
 
-    const p = await params;
+    // const p = await params;
     // ${process.env.NEXTUTH_URL}
-    const res = await fetch(`${process.env.NEXTUTH_URL}/api/products/${p.id}`)
+    const res = await fetch(`${process.env.NEXTUTH_URL}/api/products/${params.id}`, {
+    cache: "no-store"
+  })
     const product = await res.json()
 
     return (

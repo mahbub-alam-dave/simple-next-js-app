@@ -2,12 +2,16 @@
 import { signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Navbar = () => {
 
   const { data: session, status } = useSession();
   // if (status === "loading") return <p>Loading...</p>;
+
+/*   useEffect(() => {
+  console.log("Session changed:", session, status);
+}, [session, status]); */
 
       const navLinks = () => {
     return (

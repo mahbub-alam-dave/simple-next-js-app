@@ -6,6 +6,7 @@ import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import google from "../../../../.././public/assets/Google.png"
+import Swal from "sweetalert2";
 
 
 const SocialLogin = () => {
@@ -21,8 +22,14 @@ const SocialLogin = () => {
 
     useEffect(()=>{
         if(session.status ==="authenticated") {
-        router.push('/')
-        toast("Login successful")
+        router.push('/products')
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Logged In successfully",
+            showConfirmButton: false,
+            timer: 1500,
+          })
       }
       },[session.status])
 

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { useRouter, getSession } from "next/navigation";
 import toast from "react-hot-toast";
 import SocialLogin from "./SocialLogin";
@@ -10,6 +10,7 @@ import Loader from "@/app/generalComponents/Loader";
 
 const LoginForm = () => {
   const router = useRouter();
+  const { update } = useSession();
   const [loading, setLoading] = useState(false)
 
   const handleLogin = async (e) => {
@@ -23,32 +24,31 @@ const LoginForm = () => {
       const response = await signIn("credentials", {
         email,
         password,
-        callbackUrl: "/products",
+        // callbackUrl: "/products",
         redirect: true,
       });
-      if (response.ok) {
-        // toast.success("Logged In successfully");
-        Swal.fire({
-          position: "center",
-          icon: "success",
-          title: "Logged In successfully",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-        router.push("/");
-        form.reset();
-      } else {
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "Something went wrong!",
-          footer: '<a href="#">Why do I have this issue?</a>',
-        });
-      }
+if (response.ok) {
+  await update();
+  Swal.fire({
+    position: "center",
+    icon: "success",
+    title: "Logged In successfully",
+    showConfirmButton: false,
+    timer: 1500,
+  }).then(() => {
+    router.push("/products");
+    form.reset();
+  });
+} else {
+  Swal.fire({
+    icon: "error",
+    title: "Oops...",
+    text: "Invalid credentials",
+  });
+}
       //console.log({ email, password });
     } catch (error) {
       console.log(error);
-      toast.error("FAILED to Log In");
     }
     finally {
       setLoading(false)

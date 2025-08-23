@@ -28,9 +28,6 @@ export default function RootLayout({ children }) {
         className={`${roboto.className} antialiased`}
       >
         <NextAuthProvider>
-{/*             <Navbar />
-        {children}
-           <Footer /> */}
            {children}
            </NextAuthProvider>
       </body>
